@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-
-  # Unfree packages
+  # Proprietary packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-original"
@@ -50,12 +49,12 @@
     uutils-diffutils
     uutils-findutils
     uutils-coreutils-noprefix
+    linux-firmware
 
     # Games
     openmw
     supertux
     supertuxkart
-    
   ];
 
   programs.firefox.enable = true;
