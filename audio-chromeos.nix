@@ -52,12 +52,6 @@ in
     custom-ucm-conf
   ];
 
-  # Force the Intel DSP configuration for Chromebook audio routing
-  boot.extraModprobeConfig = ''
-    options snd-intel-dspcfg dsp_driver=3
-    options snd-sof-pci fw_path="intel/sof"
-  '';
-
   # This links the Chromebook-specific UCM files where ALSA can find them
   environment.sessionVariables.ALSA_CONFIG_UCM2 = "${custom-ucm-conf}/share/alsa/ucm2";
   
