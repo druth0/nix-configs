@@ -9,6 +9,10 @@
     "steam-unwrapped"
     "steam-run"
     "google-chrome"
+    "ipu6-camera-bins"
+    "ipu6-camera-bins-unstable"
+    "ivsc-firmware"
+    "ivsc-firmware-unstable"
   ];
 
   environment.systemPackages = with pkgs; [
@@ -16,6 +20,7 @@
     emacs-pgtk
     python3
     git
+    plan9port
 
     # web
     librewolf
@@ -28,6 +33,7 @@
     kdePackages.bluedevil
 
     # power
+    acpi
     powertop
     minicom
     lm_sensors
