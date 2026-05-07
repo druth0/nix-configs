@@ -1,0 +1,70 @@
+{ config, pkgs, lib, ... }:
+
+{
+
+  # Unfree packages
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-unwrapped"
+    "steam-run"
+    "google-chrome"
+  ];
+
+  environment.systemPackages = with pkgs; [
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    emacs-pgtk
+    python3
+    git
+
+    # web
+    librewolf
+    chromium
+    google-chrome
+    wget
+    curl
+    gemini-cli
+
+    kdePackages.bluedevil
+
+    # power
+    powertop
+    minicom
+    lm_sensors
+
+    # FW tools
+    dmidecode
+    flashrom
+    fw-ectool
+    firmware-updater
+    pciutils
+    usbutils
+
+    # Core utils
+    uutils-diffutils
+    uutils-findutils
+    uutils-coreutils-noprefix
+
+    # Games
+    openmw
+    supertux
+    supertuxkart
+    
+  ];
+
+  programs.firefox.enable = true;
+  programs.htop.enable = true;
+  programs.git.enable = true;
+  programs.less.enable = true;
+  programs.ssh.startAgent = true;
+  programs.tmux.enable = true;
+
+  # Enable plasma!
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+
+  services.thermald.enable = true;
+  services.keyd.enable = true;
+  powerManagement.powertop.enable = true;
+}
