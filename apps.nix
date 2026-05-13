@@ -55,6 +55,10 @@
     openmw
     supertux
     supertuxkart
+
+    # WiFi
+    iw
+    wireless-regdb
   ];
 
   programs.firefox.enable = true;
