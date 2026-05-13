@@ -68,6 +68,9 @@
   programs.ssh.startAgent = true;
   programs.tmux.enable = true;
 
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = true;
