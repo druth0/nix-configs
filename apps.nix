@@ -59,13 +59,30 @@
     # WiFi
     iw
     wireless-regdb
+
+    # Extra wayland WMs
+    wio
+    # Sway stuff
+    swayfx
+    swayr
+    swaybg
+    swayidle
+    swaylock
+    swaytools
+    swaysettings
+    mako
+    # wayfire
+    #wayfire-with-plugins
+    #wayfirePlugins.wayfire-plugins-extra
+    alacritty
+    alacritty-theme
   ];
 
   programs.firefox.enable = true;
   programs.htop.enable = true;
   programs.git.enable = true;
   programs.less.enable = true;
-  programs.ssh.startAgent = true;
+  #programs.ssh.startAgent = true;
   programs.tmux.enable = true;
 
   # Enable the OpenSSH daemon.
@@ -73,8 +90,12 @@
 
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.plasma-login-manager.enable = true;
+  #services.displayManager.sddm.enable = true;
+  #services.displayManager.sddm.wayland.enable = true;
+  # Enable cosmic
+  services.desktopManager.cosmic.enable = true;
+  #services.displayManager.cosmic-greeter.enable = true;
 
   services.thermald.enable = true;
   services.keyd.enable = true;
