@@ -3,6 +3,7 @@
 {
   # Proprietary packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "antigravity"
     "steam"
     "steam-original"
     "steam-unwrapped"
