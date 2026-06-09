@@ -28,6 +28,7 @@
     wget
     curl
     gemini-cli
+    antigravity
 
     kdePackages.bluedevil
 
