@@ -65,7 +65,7 @@
     # Extra wayland WMs
     wio
     # Sway stuff
-    swayfx
+    bemenu
     swayr
     swaybg
     swayidle
@@ -86,6 +86,11 @@
   programs.less.enable = true;
   #programs.ssh.startAgent = true;
   programs.tmux.enable = true;
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+    wrapperFeatures.base = true;
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
