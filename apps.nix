@@ -85,6 +85,9 @@
     android-tools
     adb-sync
     adbfs-rootless
+
+    # Librem5
+    uuu
   ];
 
   programs.firefox.enable = true;
