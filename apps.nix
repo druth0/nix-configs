@@ -4,6 +4,8 @@
   # Proprietary packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "antigravity"
+    "android-sdk-platform-tools"
+    "platform-tools"
     "steam"
     "steam-original"
     "steam-unwrapped"
@@ -78,11 +80,17 @@
     #wayfirePlugins.wayfire-plugins-extra
     alacritty
     alacritty-theme
+
+    # Android
+    android-tools
+    adb-sync
+    adbfs-rootless
   ];
 
   programs.firefox.enable = true;
-  programs.htop.enable = true;
   programs.git.enable = true;
+  programs.htop.enable = true;
+  programs.kdeconnect.enable = true;
   programs.less.enable = true;
   #programs.ssh.startAgent = true;
   programs.tmux.enable = true;
@@ -107,4 +115,9 @@
   services.thermald.enable = true;
   services.keyd.enable = true;
   powerManagement.powertop.enable = true;
+
+  networking.firewall = rec {
+    allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+    allowedUDPPortRanges = allowedTCPPortRanges;
+  };
 }
