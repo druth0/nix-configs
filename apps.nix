@@ -88,6 +88,9 @@
 
     # Librem5
     uuu
+    python314Packages.requests
+    python314Packages.tqdm
+    python314Packages.python-jenkins
   ];
 
   programs.firefox.enable = true;
