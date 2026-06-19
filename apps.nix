@@ -65,21 +65,21 @@
     wireless-regdb
 
     # Extra wayland WMs
-    wio
+    #wio
     # Sway stuff
-    bemenu
-    swayr
-    swaybg
-    swayidle
-    swaylock
-    swaytools
-    swaysettings
-    mako
+    #bemenu
+    #swayr
+    #swaybg
+    #swayidle
+    #swaylock
+    #swaytools
+    #swaysettings
+    #mako
     # wayfire
     #wayfire-with-plugins
     #wayfirePlugins.wayfire-plugins-extra
-    alacritty
-    alacritty-theme
+    #alacritty
+    #alacritty-theme
 
     # Android
     android-tools
@@ -91,6 +91,12 @@
     python314Packages.requests
     python314Packages.tqdm
     python314Packages.python-jenkins
+
+    # Theming
+    sweet
+    candy-icons
+    sweet-nova
+    sweet-folders
   ];
 
   programs.firefox.enable = true;
@@ -100,11 +106,11 @@
   programs.less.enable = true;
   #programs.ssh.startAgent = true;
   programs.tmux.enable = true;
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-    wrapperFeatures.base = true;
-  };
+  #programs.sway = {
+  #  enable = true;
+  #  wrapperFeatures.gtk = true;
+  #  wrapperFeatures.base = true;
+  #};
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
