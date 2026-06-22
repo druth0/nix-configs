@@ -25,7 +25,7 @@
     plan9port
 
     # web
-    librewolf
+    # librewolf now insecure with no maintainer
     chromium
     google-chrome
     wget
