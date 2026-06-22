@@ -92,6 +92,9 @@
     python314Packages.tqdm
     python314Packages.python-jenkins
 
+    # Analogue Pocket
+    pupdate
+
     # Theming
     sweet
     candy-icons
