@@ -38,7 +38,6 @@
     # power
     acpi
     powertop
-    minicom
     lm_sensors
 
     # FW tools
@@ -100,8 +99,6 @@
     candy-icons
     sweet-nova
     sweet-folders
-
-    screen
   ];
 
   programs.firefox.enable = true;
@@ -109,8 +106,8 @@
   programs.htop.enable = true;
   programs.kdeconnect.enable = true;
   programs.less.enable = true;
-  #programs.ssh.startAgent = true;
   programs.tmux.enable = true;
+  programs.screen.enable = true;
   #programs.sway = {
   #  enable = true;
   #  wrapperFeatures.gtk = true;
@@ -123,10 +120,8 @@
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
   services.displayManager.plasma-login-manager.enable = true;
-  #services.displayManager.sddm.enable = true;
-  #services.displayManager.sddm.wayland.enable = true;
   # Enable cosmic
-  services.desktopManager.cosmic.enable = true;
+  #services.desktopManager.cosmic.enable = true;
   #services.displayManager.cosmic-greeter.enable = true;
 
   services.thermald.enable = true;
