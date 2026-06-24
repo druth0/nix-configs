@@ -100,6 +100,8 @@
     candy-icons
     sweet-nova
     sweet-folders
+
+    screen
   ];
 
   programs.firefox.enable = true;
