@@ -99,12 +99,15 @@
     candy-icons
     sweet-nova
     sweet-folders
+
+    # MariaDB
+    mycli
   ];
 
   programs.firefox.enable = true;
   programs.git.enable = true;
   programs.htop.enable = true;
-  programs.kdeconnect.enable = true;
+  #programs.kdeconnect.enable = true;
   programs.less.enable = true;
   programs.tmux.enable = true;
   programs.screen.enable = true;
@@ -116,6 +119,8 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  programs.gnupg.agent.enable = true;
+  programs.gnupg.agent.enableSSHSupport = true;
 
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
@@ -123,6 +128,10 @@
   # Enable cosmic
   #services.desktopManager.cosmic.enable = true;
   #services.displayManager.cosmic-greeter.enable = true;
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
 
   services.thermald.enable = true;
   services.keyd.enable = true;
