@@ -122,8 +122,11 @@
   programs.gnupg.agent.enable = true;
   programs.gnupg.agent.enableSSHSupport = true;
 
+  #services.desktopManager.gnome.enable = true;
+
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
+  #services.displayManager.sddm.enable = true;
   services.displayManager.plasma-login-manager.enable = true;
   # Enable cosmic
   #services.desktopManager.cosmic.enable = true;
@@ -136,6 +139,18 @@
   services.thermald.enable = true;
   services.keyd.enable = true;
   powerManagement.powertop.enable = true;
+
+  # Set up IWD
+  networking.networkmanager.wifi.backend = "iwd";
+
+  networking.wireless.iwd.settings = {
+    Network = {
+      EnableIPv6 = true;
+    };
+    Settings = {
+      AutoConnect = true;
+    };
+  };
 
   networking.firewall = rec {
     allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];

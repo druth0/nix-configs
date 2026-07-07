@@ -21,7 +21,7 @@
 
     xpadneo.enable = true;
 
-    intelgpu.driver = "xe";
+    intelgpu.driver = "i915";
 
     sensor.iio.enable = true;
 
@@ -32,3 +32,4 @@
     ];
   };
 }
+
