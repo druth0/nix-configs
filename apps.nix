@@ -30,6 +30,7 @@
     wget
     curl
     dig
+    inetutils
     gemini-cli
     antigravity
 
