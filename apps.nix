@@ -11,6 +11,8 @@
     "steam-unwrapped"
     "steam-run"
     "google-chrome"
+    "firefox-bin"
+    "firefox-bin-unwrapped"
     "ipu6-camera-bins"
     "ipu6-camera-bins-unstable"
     "ivsc-firmware"
@@ -26,6 +28,7 @@
     # web
     # librewolf now insecure with no maintainer
     chromium
+    firefox-bin
     google-chrome
     wget
     curl
@@ -64,23 +67,6 @@
     iw
     wireless-regdb
 
-    # Extra wayland WMs
-    #wio
-    # Sway stuff
-    #bemenu
-    #swayr
-    #swaybg
-    #swayidle
-    #swaylock
-    #swaytools
-    #swaysettings
-    #mako
-    # wayfire
-    #wayfire-with-plugins
-    #wayfirePlugins.wayfire-plugins-extra
-    #alacritty
-    #alacritty-theme
-
     # Android
     android-tools
     adb-sync
@@ -103,20 +89,16 @@
 
     # MariaDB
     mycli
+
+    coreboot-utils
   ];
 
   programs.firefox.enable = true;
   programs.git.enable = true;
   programs.htop.enable = true;
-  #programs.kdeconnect.enable = true;
   programs.less.enable = true;
   programs.tmux.enable = true;
   programs.screen.enable = true;
-  #programs.sway = {
-  #  enable = true;
-  #  wrapperFeatures.gtk = true;
-  #  wrapperFeatures.base = true;
-  #};
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -127,11 +109,8 @@
 
   # Enable plasma!
   services.desktopManager.plasma6.enable = true;
-  #services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = false;
   services.displayManager.plasma-login-manager.enable = true;
-  # Enable cosmic
-  #services.desktopManager.cosmic.enable = true;
-  #services.displayManager.cosmic-greeter.enable = true;
   services.mysql = {
     enable = true;
     package = pkgs.mariadb;
@@ -152,6 +131,14 @@
       AutoConnect = true;
     };
   };
+
+#  services.dbus.packages = [pkgs.wpa_supplicant];
+#  networking.networkmanager.wifi.backend = "wpa_supplicant";
+#  networking.wireless = {
+#    enable = true;
+#    userControlled = true;
+#    dbusControlled = true;
+#  };
 
   networking.firewall = rec {
     allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
