@@ -1,6 +1,11 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  #boot.kernelParams = [
+  #  "xe.force_probe=7d45"
+  #  "i915.force_probe=!7d45"
+  #];
+
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
