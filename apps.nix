@@ -121,24 +121,24 @@
   powerManagement.powertop.enable = true;
 
   # Set up IWD
-  networking.networkmanager.wifi.backend = "iwd";
+#  networking.networkmanager.wifi.backend = "iwd";
 
-  networking.wireless.iwd.settings = {
-    Network = {
-      EnableIPv6 = true;
-    };
-    Settings = {
-      AutoConnect = true;
-    };
-  };
+#  networking.wireless.iwd.settings = {
+#    Network = {
+#      EnableIPv6 = true;
+#    };
+#    Settings = {
+#      AutoConnect = true;
+#    };
+#  };
 
 #  services.dbus.packages = [pkgs.wpa_supplicant];
 #  networking.networkmanager.wifi.backend = "wpa_supplicant";
-#  networking.wireless = {
-#    enable = true;
+  networking.wireless = {
+    enable = true;
 #    userControlled = true;
-#    dbusControlled = true;
-#  };
+    dbusControlled = true;
+  };
 
   networking.firewall = rec {
     allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
