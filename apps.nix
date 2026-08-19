@@ -74,9 +74,6 @@
 
     # Librem5
     uuu
-    python314Packages.requests
-    python314Packages.tqdm
-    python314Packages.python-jenkins
 
     # Analogue Pocket
     pupdate
@@ -91,6 +88,11 @@
     mycli
 
     coreboot-utils
+
+    # Office
+    kmymoney
+    gnucash
+    libreoffice
   ];
 
   programs.firefox.enable = true;
