@@ -6,6 +6,12 @@
   #  "i915.force_probe=!7d45"
   #];
 
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "weekly";
+    fileSystems = [ "/" ];
+  };
+
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
