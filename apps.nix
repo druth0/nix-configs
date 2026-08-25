@@ -93,6 +93,7 @@
     kmymoney
     gnucash
     libreoffice
+    libblockdev
   ];
 
   programs.firefox.enable = true;
@@ -117,6 +118,7 @@
     enable = true;
     package = pkgs.mariadb;
   };
+  services.udisks2.enable = true;
 
   services.thermald.enable = true;
   services.keyd.enable = true;

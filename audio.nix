@@ -41,6 +41,7 @@
     pavucontrol
     pwvucontrol
     sof-firmware
+    kdePackages.k3b
   ];
   
   hardware.alsa.enablePersistence = true;

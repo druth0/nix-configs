@@ -5,6 +5,7 @@
     availableKernelModules = [
     ];
     kernelModules = [
+      "sg"
     ];
     luks = {
       devices."root" = {
