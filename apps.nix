@@ -3,7 +3,6 @@
 {
   # Proprietary packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "antigravity"
     "android-sdk-platform-tools"
     "platform-tools"
     "steam"
@@ -34,8 +33,6 @@
     curl
     dig
     inetutils
-    gemini-cli
-    antigravity
 
     kdePackages.bluedevil
 
@@ -69,7 +66,7 @@
 
     # Android
     android-tools
-    adb-sync
+    #adb-sync
     adbfs-rootless
 
     # Librem5
