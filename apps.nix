@@ -76,7 +76,6 @@
     pupdate
 
     # Theming
-    sweet
     candy-icons
     sweet-nova
     sweet-folders
