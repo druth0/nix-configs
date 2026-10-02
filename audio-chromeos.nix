@@ -6,7 +6,7 @@ let
     owner = "WeirdTreeThing";
     repo = "alsa-ucm-conf-cros";
     rev = "standalone";
-    hash = "sha256-eARLyVzMI84SRNkts8l9jjloWfnZ5gH+0EhFxNa0EY4=";
+    hash = "sha256-ycm4X03WbuGS1xTD6KFgdnN+rpXQYp02SPQI8Ztl07c=";
   };
 
   # Custom UCM package that overlays the official ALSA configs
