@@ -25,8 +25,6 @@
     plan9port
 
     # web
-    # librewolf now insecure with no maintainer
-    chromium
     firefox-bin
     google-chrome
     wget
@@ -63,10 +61,10 @@
     # WiFi
     iw
     wireless-regdb
+    wpa_supplicant_gui
 
     # Android
     android-tools
-    #adb-sync
     adbfs-rootless
 
     # Librem5
