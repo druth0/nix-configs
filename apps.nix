@@ -65,7 +65,6 @@
 
     # Android
     android-tools
-    adbfs-rootless
 
     # Librem5
     uuu
