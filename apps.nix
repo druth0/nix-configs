@@ -40,10 +40,13 @@
     lm_sensors
 
     # FW tools
+    coreboot-toolchain.x64
+    coreboot-utils
     dmidecode
     flashrom
     fw-ectool
     firmware-updater
+    i2c-tools
     pciutils
     usbutils
 
@@ -79,8 +82,6 @@
 
     # MariaDB
     mycli
-
-    coreboot-utils
 
     # Office
     kmymoney
