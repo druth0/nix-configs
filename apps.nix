@@ -88,6 +88,10 @@
     gnucash
     libreoffice
     libblockdev
+
+    # ext2 tools
+    e2fsprogs
+    gparted-full
   ];
 
   programs.firefox.enable = true;
