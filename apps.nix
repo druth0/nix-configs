@@ -84,7 +84,7 @@
     mycli
 
     # Office
-    kmymoney
+    #kmymoney
     gnucash
     libreoffice
     libblockdev
