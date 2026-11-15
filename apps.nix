@@ -31,6 +31,13 @@
     python3
     git
     plan9port
+
+    # virtualization
+    qemu_full
+    qemu_kvm
+    qemu-utils
+    qemu-user
+    qtemu
     virt-manager
 
     # web
