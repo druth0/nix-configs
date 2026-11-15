@@ -18,11 +18,20 @@
     "ivsc-firmware-unstable"
   ];
 
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+    };
+  };
+
+  programs.virt-manager.enable = true;
+
   environment.systemPackages = with pkgs; [
     emacs-pgtk
     python3
     git
     plan9port
+    virt-manager
 
     # web
     firefox-bin
