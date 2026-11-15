@@ -2,23 +2,8 @@
 { config, pkgs, ... }:
 
 {
-  # /etc/nixos/configuration.nix
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-    };
-  };
-
-  programs.virt-manager.enable = true;
-
   environment.systemPackages = with pkgs; [
-    # For virt-install
-    virt-manager
-
     dnsmasq
-
-    # For lsusb
-    usbutils
   ];
 
   services.caddy = {
